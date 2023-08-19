@@ -42,7 +42,7 @@
           <div class="flex justify-center pt-10 items-center">
             <p class="text-xl font-medium">Use Promo Code</p>
             <button
-              class="bg-btn-color ml-2 md:ml-5 px-3 md:px-5 py-2 rounded-lg"
+              class="bg-btn-color text-white ml-2 md:ml-5 px-3 md:px-5 py-2 rounded-lg"
               disabled
             >
               SELL200
@@ -455,18 +455,20 @@
           </div>
         </div>
         <!-- total price section start here  -->
-        <div class="w-full text-center md:w-2/4 pt-20">
+        <div class="w-full text-center md:text-left md:w-2/4 lg:w-1/4 pt-20">
           <!-- coupon div  -->
           <div>
             <h4 class="work-sans text-xl font-medium pb-5">Have coupon?</h4>
-            <div class="flex justify-center">
+            <div class="flex justify-center md:justify-start">
               <input
+                id="coupon"
                 class="border px-3 py-2 outline-none"
                 placeholder="Coupon code"
                 type="text"
               />
               <button
-                class="bg-btn-color px-3 py-2 rounded-tr-lg rounded-br-lg"
+                id="apply-btn"
+                class="bg-btn-color px-3 py-2 text-white rounded-tr-lg rounded-br-lg"
                 disabled
               >
                 Apply
@@ -474,21 +476,46 @@
             </div>
           </div>
           <!-- item list  -->
-          <div id="item-list" class="h-36"></div>
+          <div id="item-list" class="my-10"></div>
           <!-- price list  -->
           <div class="work-sans text-xl">
-            <p>Total price: <span id="total-price">00</span></p>
+            <p>Total price: <span id="total-price"></span></p>
 
-            <p>Discount: <span id="discount">00</span></p>
+            <p>Discount: <span id="discount"></span></p>
 
-            <p>Total: <span id="total">00</span></p>
+            <p>Total: <span id="total"></span></p>
 
             <button
-              class="bg-btn-color px-3 py-2 w-full mt-10 rounded-lg"
+              id="purchase-btn"
+              onclick="my_modal_5.showModal()"
+              class="bg-btn-color text-white px-3 py-2 w-2/4 md:w-11/12 mt-10 rounded-lg"
               disabled
             >
-              Apply
+              Make Purchase
             </button>
+            <!-- modal  -->
+            <!-- Open the modal using ID.showModal() method -->
+
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box">
+                <img class="mx-auto" src="./images/congo.png" />
+                <h1 class="text-5xl font-bold text-center mt-8">
+                  Congratulations
+                </h1>
+                <p class="text-xl text-center mt-5">
+                  Your Purchase the product
+                </p>
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button
+                    id="congo-btn"
+                    class="btn bg-btn-color text-white hover:text-black mx-auto"
+                  >
+                    Go Home
+                  </button>
+                </div>
+              </form>
+            </dialog>
           </div>
         </div>
       </section>
