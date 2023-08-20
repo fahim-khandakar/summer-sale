@@ -91,6 +91,7 @@ congo.addEventListener("click", function () {
     paragraphs[i].parentNode.removeChild(paragraphs[i]);
     i--;
   }
+  totalPriceSum = 0;
   totalPrice.innerText = "";
   discount.innerText = "";
   total.innerText = "";
