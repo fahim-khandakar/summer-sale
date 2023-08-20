@@ -92,9 +92,9 @@ congo.addEventListener("click", function () {
     i--;
   }
   totalPriceSum = 0;
-  totalPrice.innerText = "";
-  discount.innerText = "";
-  total.innerText = "";
+  totalPrice.innerText = "0.00";
+  discount.innerText = "0.00";
+  total.innerText = "0.00";
   purchaseBtn.setAttribute("disabled", "disabled");
   applyBtn.setAttribute("disabled", "disabled");
 });
