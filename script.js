@@ -96,6 +96,7 @@ congo.addEventListener("click", function () {
   discount.innerText = "";
   total.innerText = "";
   purchaseBtn.setAttribute("disabled", "disabled");
+  applyBtn.setAttribute("disabled", "disabled");
 });
 
 applyBtn.addEventListener("click", function () {
